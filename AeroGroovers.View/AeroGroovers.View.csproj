@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,20 +58,21 @@
     <Compile Include="Shader\Background.cs" />
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="TextObject\AGText.cs" />
+    <Compile Include="Scene\EntryScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AeroGroovers.Model\AeroGroovers.Model.csproj">
-      <Project>{0e4ddd91-4faf-4604-81e6-ee8fe7475474}</Project>
-      <Name>AeroGroovers.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Effect\" />
     <Folder Include="TextureObject\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AeroGroovers.model\AeroGroovers.model.csproj">
+      <Project>{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}</Project>
+      <Name>AeroGroovers.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AltseedDotNet.1.1.6\build\net45\AltseedDotNet.targets" Condition="Exists('..\packages\AltseedDotNet.1.1.6\build\net45\AltseedDotNet.targets')" />

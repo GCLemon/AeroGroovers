@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroGroovers.View", "AeroGroovers.View\AeroGroovers.View.csproj", "{237D568B-5AAF-450D-A6E9-5A9C13DD78B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroGroovers.Model", "AeroGroovers.Model\AeroGroovers.Model.csproj", "{0E4DDD91-4FAF-4604-81E6-EE8FE7475474}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroGroovers.Model", "AeroGroovers.model\AeroGroovers.model.csproj", "{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{237D568B-5AAF-450D-A6E9-5A9C13DD78B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237D568B-5AAF-450D-A6E9-5A9C13DD78B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237D568B-5AAF-450D-A6E9-5A9C13DD78B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E4DDD91-4FAF-4604-81E6-EE8FE7475474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E4DDD91-4FAF-4604-81E6-EE8FE7475474}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E4DDD91-4FAF-4604-81E6-EE8FE7475474}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E4DDD91-4FAF-4604-81E6-EE8FE7475474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

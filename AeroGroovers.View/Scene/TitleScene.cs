@@ -54,15 +54,15 @@ namespace AeroGroovers.View
             base.OnStartUpdating();
 
             // BGMの再生
-            BGM_ID = Sound.Play(Sound.BGM_Title);
+            BGM_ID = Sound.Play(BGM_Title);
         }
 
         protected override void OnUpdated()
         {
             // キーが押されたらシーンチェンジ
             foreach (Keys key in Enum.GetValues(typeof(Keys)))
-                if (Controller.KeyPush(key)) { }
-            // Engine.ChangeSceneWithTransition(new Entry(), new TransitionFade(1, 1));
+                if (Controller.KeyPush(key))
+                    Engine.ChangeSceneWithTransition(new EntryScene(), new TransitionFade(1, 1));
 
             // ボタンが押されたらシーンチェンジ
             for (int i = 0; i < 16; ++i)
@@ -70,8 +70,8 @@ namespace AeroGroovers.View
                 {
                     Joystick joystick = Controller.GetJoystick(i);
                     for (int j = 0; j < joystick.ButtonsCount; ++j)
-                        if (Controller.JoyPush(joystick, j)) { }
-                    // Engine.ChangeSceneWithTransition(new Entry(), new TransitionFade(1, 1));
+                        if (Controller.JoyPush(joystick, j))
+                            Engine.ChangeSceneWithTransition(new EntryScene(), new TransitionFade(1, 1));
                 }
         }
 
@@ -80,7 +80,7 @@ namespace AeroGroovers.View
             base.OnTransitionBegin();
 
             // SEの再生
-            Sound.Play(Sound.SE_Start);
+            Sound.Play(SE_Start);
         }
     }
 }
