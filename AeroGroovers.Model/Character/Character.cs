@@ -1,4 +1,4 @@
-﻿namespace AeroGroovers.Model.Character
+﻿namespace AeroGroovers.Model
 {
     /// <summary>
     /// キャラクターが共通して持つ情報

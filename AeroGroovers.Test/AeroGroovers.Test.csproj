@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>AeroGroovers.model</RootNamespace>
-    <AssemblyName>AeroGroovers.model</AssemblyName>
+    <ProjectGuid>{5A504CAD-7313-4172-8533-CFF8A1F4C914}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AeroGroovers.Test</RootNamespace>
+    <AssemblyName>AeroGroovers.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,28 +17,27 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Skill\Skill.cs" />
-    <Compile Include="Character\Character.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Score.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="NoteParameter.cs" />
-    <Compile Include="Controller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AeroGroovers.model\AeroGroovers.model.csproj">
+      <Project>{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}</Project>
+      <Name>AeroGroovers.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,20 +9,13 @@ namespace AeroGroovers.View
     /// </summary>
     public class TitleScene : Scene
     {
-        /// <summary>
-        /// 背景に使うレイヤー
-        /// </summary>
-        private Layer2D BackLayer = new Layer2D();
-
-        /// <summary>
-        /// テキストを表示するレイヤー
-        /// </summary>
-        private Layer2D TextLayer = new Layer2D();
-
         protected override void OnRegistered()
         {
+            Layer2D back = new Layer2D();
+            Layer2D text = new Layer2D();
+
             // 背景を設定する
-            BackLayer.AddPostEffect(
+            back.AddPostEffect(
                 new Background(
                     new Vector3DF(0.0f, 0.4f, 1.0f),
                     new Vector3DF(0.4f, 0.7f, 1.0f)
@@ -36,17 +29,17 @@ namespace AeroGroovers.View
             AGText title = new AGText(120, 4, center);
             title.SetText("Aero Groovers");
             title.Position = new Vector2DF(640, 150);
-            TextLayer.AddObject(title);
+            text.AddObject(title);
 
             // 「Press Any Button.」
             AGText announce = new AGText(72, 4, center);
             announce.SetText("Press Any Button.");
             announce.Position = new Vector2DF(640, 600);
-            TextLayer.AddObject(announce);
+            text.AddObject(announce);
 
             // レイヤーを追加する
-            AddLayer(BackLayer);
-            AddLayer(TextLayer);
+            AddLayer(back);
+            AddLayer(text);
         }
 
         protected override void OnStartUpdating()

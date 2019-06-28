@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroGroovers.View", "AeroGr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroGroovers.Model", "AeroGroovers.model\AeroGroovers.model.csproj", "{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AeroGroovers.Test", "AeroGroovers.Test\AeroGroovers.Test.csproj", "{5A504CAD-7313-4172-8533-CFF8A1F4C914}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A504CAD-7313-4172-8533-CFF8A1F4C914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A504CAD-7313-4172-8533-CFF8A1F4C914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A504CAD-7313-4172-8533-CFF8A1F4C914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A504CAD-7313-4172-8533-CFF8A1F4C914}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

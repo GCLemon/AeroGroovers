@@ -1,8 +1,10 @@
 ﻿using asd;
 
+using AeroGroovers.Model;
+
 namespace AeroGroovers.View
 {
-    public partial class Controller
+    public partial class Controller : Model.Controller
     {
         private Joystick Joystick;
 
@@ -14,7 +16,7 @@ namespace AeroGroovers.View
         /// <summary>
         /// キーボードを登録する
         /// </summary>
-        public Controller()
+        public Controller() : base(-1)
         {
             ControllerType = ControllerType.Keyboard;
         }
@@ -22,7 +24,7 @@ namespace AeroGroovers.View
         /// <summary>
         /// ジョイスティックを登録する
         /// </summary>
-        public Controller(int joystick_index)
+        public Controller(int joystick_index) : base(joystick_index)
         {
             Joystick = Engine.JoystickContainer.GetJoystickAt(joystick_index);
 

@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Constant.cs" />
     <Compile Include="Controller\ClassMembers.cs" />
     <Compile Include="Controller\InstanceMembers.cs" />
     <Compile Include="Program.cs" />
@@ -59,6 +58,13 @@
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="TextObject\AGText.cs" />
     <Compile Include="Scene\EntryScene.cs" />
+    <Compile Include="TextureObject\Window.cs" />
+    <Compile Include="TextureObject\EntryWindow.cs" />
+    <Compile Include="Scene\SelectScene.cs" />
+    <Compile Include="Layer\ImageLayer.cs" />
+    <Compile Include="Layer\TextLayer.cs" />
+    <Compile Include="Scene\OptionScene.cs" />
+    <Compile Include="TextureObject\OptionWidnow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,6 +73,7 @@
   <ItemGroup>
     <Folder Include="Effect\" />
     <Folder Include="TextureObject\" />
+    <Folder Include="Layer\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AeroGroovers.model\AeroGroovers.model.csproj">

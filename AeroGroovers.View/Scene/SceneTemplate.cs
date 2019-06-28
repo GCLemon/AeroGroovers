@@ -16,8 +16,7 @@ namespace AeroGroovers.View
         /// <summary>
         /// ゲーム全体の情報を持つオブジェクト
         /// </summary>
-        protected static Game Game = new Game();
-
+        public static Game Game { get; protected set; } = new Game();
 
         /// <summary>
         /// タイトルシーンで再生するBGM
@@ -105,14 +104,13 @@ namespace AeroGroovers.View
 
             // 効果音の設定
             SE_Start = Sound.CreateSE("Resources/Sounds/SE_Start.ogg");
-            SE_Cancel = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_Open = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_Close = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
+            SE_Cancel = Sound.CreateSE("Resources/Sounds/SE_Cancel.ogg");
+            SE_Open = Sound.CreateSE("Resources/Sounds/SE_Open.ogg");
+            SE_Close = Sound.CreateSE("Resources/Sounds/SE_Close.ogg");
             SE_Decision = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_Select = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_BattleStart = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_Decision = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_Decision = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
+            SE_Select = Sound.CreateSE("Resources/Sounds/SE_Select.ogg");
+            SE_BattleStart = Sound.CreateSE("Resources/Sounds/SE_BattleStart.ogg");
+            SE_Hit = Sound.CreateSE("Resources/Sounds/SE_Hit.ogg");
         }
 
         protected override void OnStartUpdating()

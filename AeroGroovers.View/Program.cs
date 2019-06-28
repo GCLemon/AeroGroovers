@@ -1,7 +1,4 @@
 ﻿using asd;
-using System;
-
-using static System.Environment;
 
 namespace AeroGroovers.View
 {
