@@ -121,4 +121,31 @@
         /// <summary> Shoot以下が0回でアルティメットシュート </summary>
         UltimateShoot,
     }
+
+    /// <summary>
+    /// スキルの種類
+    /// </summary>
+    public enum SkillType
+    {
+        /// <summary> クリア妨害スキル </summary>
+        Attack,
+
+        /// <summary> ゲージ減少防止スキル </summary>
+        Guard,
+
+        /// <summary> ゲージ回復スキル </summary>
+        Heal,
+
+        /// <summary> ステータスアップスキル </summary>
+        Boost,
+
+        /// <summary> 判定易化スキル </summary>
+        Support,
+
+        /// <summary> ステータスダウンスキル </summary>
+        Edge,
+
+        /// <summary> 自滅スキル </summary>
+        Damage
+    }
 }

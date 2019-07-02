@@ -2,6 +2,9 @@
 
 namespace AeroGroovers.View
 {
+    /// <summary>
+    /// 曲選択シーン
+    /// </summary>
     public partial class SelectScene : Scene
     {
         protected override void OnRegistered()

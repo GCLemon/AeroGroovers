@@ -65,7 +65,7 @@ namespace AeroGroovers.View
         /// </summary>
         /// <param name="x"> x方向の拡大率 </param>
         /// <param name="y"> y方向の拡大率 </param>
-        public void SetSize(int x, int y)
+        public void SetScale(float x, float y)
         {
             Scale = new Vector2DF(x, y);
             SetCenterPosition();

@@ -47,7 +47,7 @@ namespace AeroGroovers.Model
         /// <summary>
         /// ノーツの情報格納する.
         /// </summary>
-        public Dictionary<Difficulty, List<NoteParameters>> Notes { get; internal set; }
+        public Dictionary<Difficulty, List<NoteInfo>> Notes { get; internal set; }
 
         /// <summary>
         /// tomlファイルを読み込むストリーム
@@ -58,7 +58,7 @@ namespace AeroGroovers.Model
         public Score(string toml_path)
         {
             Level = new Dictionary<Difficulty, int>();
-            Notes = new Dictionary<Difficulty, List<NoteParameters>>();
+            Notes = new Dictionary<Difficulty, List<NoteInfo>>();
 
             // ローカルメソッドを定義
             void SetInfo(string line, string key, string regex_s, string regex_e)
@@ -138,7 +138,7 @@ namespace AeroGroovers.Model
                 double tempo = Tempo;
                 int ofset = Ofset;
 
-                List<NoteParameters> score = new List<NoteParameters>();
+                List<NoteInfo> score = new List<NoteInfo>();
 
                 // 1小節のノーツの数を求める
                 int Length(string l)
@@ -171,7 +171,7 @@ namespace AeroGroovers.Model
                         else
                         {
                             // ノーツの情報を追加
-                            NoteParameters note = new NoteParameters();
+                            NoteInfo note = new NoteInfo();
                             note.Number = c - 48;
                             note.Timing = (long)(60000 / tempo               // 1ビートあたりの時間(ms/b)
                                         * (timing / length * measure + beat) // ビート数
@@ -180,6 +180,9 @@ namespace AeroGroovers.Model
                             // ノーツのインデックスが0でないときは加える
                             if (note.Number != 0) score.Add(note);
                         }
+
+                        // もし括弧の外だったらカウンタをインクリメント
+                        if (scope == 0) ++timing;
                     }
 
                     beat += measure;

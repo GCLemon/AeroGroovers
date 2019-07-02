@@ -65,6 +65,20 @@
     <Compile Include="Layer\TextLayer.cs" />
     <Compile Include="Scene\OptionScene.cs" />
     <Compile Include="TextureObject\OptionWidnow.cs" />
+    <Compile Include="Scene\GameScene.cs" />
+    <Compile Include="Layer\PlayLayer.cs" />
+    <Compile Include="TextureObject\Note.cs" />
+    <Compile Include="TextObject\ComboText.cs" />
+    <Compile Include="Layer\UILayer.cs" />
+    <Compile Include="Effect\GuageEffect.cs" />
+    <Compile Include="Effect\HitEffect.cs" />
+    <Compile Include="Effect\ReadyGoEffect.cs" />
+    <Compile Include="TextureObject\LaneEffect.cs" />
+    <Compile Include="TextureObject\GaugeObject\GaugeObject.cs" />
+    <Compile Include="TextureObject\GaugeObject\ClearGauge.cs" />
+    <Compile Include="TextureObject\GaugeObject\SkillGauge.cs" />
+    <Compile Include="TextureObject\PauseWindow.cs" />
+    <Compile Include="Scene\ResultScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -74,11 +88,12 @@
     <Folder Include="Effect\" />
     <Folder Include="TextureObject\" />
     <Folder Include="Layer\" />
+    <Folder Include="TextureObject\GaugeObject\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AeroGroovers.model\AeroGroovers.model.csproj">
       <Project>{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}</Project>
-      <Name>AeroGroovers.Model</Name>
+      <Name>AeroGroovers.model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -63,7 +63,7 @@ namespace AeroGroovers.View
             WindowSize = new Vector2DF(size_x, size_y);
 
             // テクスチャの設定
-            Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/Window.png");
+            Texture = Engine.Graphics.CreateEmptyTexture2D(0, 0, 0);
             SetTexture();
 
             // 描画部分の設定
@@ -128,7 +128,7 @@ namespace AeroGroovers.View
                     xy_ul, xy_ur, xy_dr, xy_dl,
                     white, white, white, white,
                     uv_ul, uv_ur, uv_dr, uv_dl,
-                    WindowMaterial, AlphaBlendMode.Add, 5
+                    WindowMaterial, AlphaBlendMode.Add, 0
                 );
         }
 

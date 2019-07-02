@@ -3,7 +3,7 @@
     /// <summary>
     /// ノーツが持つ情報 ノーツオブジェクトに埋め込んで使う
     /// </summary>
-    public struct NoteParameters
+    public struct NoteInfo
     {
         /// <summary>
         /// ノートの番号(左から1,2,3,4,5)

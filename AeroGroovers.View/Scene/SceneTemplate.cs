@@ -11,7 +11,7 @@ namespace AeroGroovers.View
         /// <summary>
         /// 鳴らされているBGMのID(Sound.Play()の戻り値を格納する)
         /// </summary>
-        protected static int BGM_ID;
+        public static int BGM_ID;
 
         /// <summary>
         /// ゲーム全体の情報を持つオブジェクト

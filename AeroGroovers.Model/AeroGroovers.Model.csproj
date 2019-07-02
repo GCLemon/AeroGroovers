@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AeroGroovers.model</RootNamespace>
+    <RootNamespace>AeroGroovers.Model</RootNamespace>
     <AssemblyName>AeroGroovers.model</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
@@ -37,8 +37,16 @@
     <Compile Include="Player.cs" />
     <Compile Include="Score.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="NoteParameter.cs" />
+    <Compile Include="NoteInfo.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="Character\Kanon.cs" />
+    <Compile Include="Character\Rimu.cs" />
+    <Compile Include="Character\Rintaro.cs" />
+    <Compile Include="Character\Kakeru.cs" />
+    <Compile Include="Skill\Kanon.cs" />
+    <Compile Include="Skill\Rimu.cs" />
+    <Compile Include="Skill\Rintaro.cs" />
+    <Compile Include="Skill\Kakeru.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
