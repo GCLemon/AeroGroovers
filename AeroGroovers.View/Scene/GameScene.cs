@@ -173,7 +173,9 @@ namespace AeroGroovers.View
             EffectLayer.AddObject(ReadyGo);
         }
 
-        // ゲームをリセットする
+        /// <summary>
+        /// ゲームをリセットする
+        /// </summary>
         void Reset()
         {
             // ノーツのタイマーを初期化
@@ -181,7 +183,9 @@ namespace AeroGroovers.View
             Note.Stopwatch.Reset();
         }
 
-        // ゲームを開始する
+        /// <summary>
+        /// ゲームを開始する
+        /// </summary>
         void StartGame()
         {
             // コントローラーからの入力を受け付ける
@@ -196,7 +200,9 @@ namespace AeroGroovers.View
             Note.Stopwatch.Start();
         }
 
-        // 音を鳴らす
+        /// <summary>
+        /// 音を鳴らす
+        /// </summary>
         void StartMusic()
         {
             // BGMのスタート
@@ -205,18 +211,21 @@ namespace AeroGroovers.View
             MusicStarted = true;
         }
 
-        // ゲームを終える
+        /// <summary>
+        /// ゲームを終える
+        /// </summary>
         void TerminateGame()
         {
-            /*
-            Engine.ChangeSceneWithTransition(new Result(), new TransitionFade(1, 1));
-            */
+            Engine.ChangeSceneWithTransition(new ResultScene(), new TransitionFade(1, 1));
+            
 
             // 音の再生を止める
             Sound.Stop(BGM_ID);
         }
 
-        // ポーズ
+        /// <summary>
+        /// ポーズ
+        /// </summary>
         void Pause()
         {
             // 音の再生を止める
@@ -234,7 +243,9 @@ namespace AeroGroovers.View
             CurrentState = GameState.Pause;
         }
 
-        // ポーズ解除
+        /// <summary>
+        /// ポーズ解除
+        /// </summary>
         void Resume()
         {
             // 音を再生する

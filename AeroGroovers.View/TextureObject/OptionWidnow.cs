@@ -102,7 +102,7 @@ namespace AeroGroovers.View
             public OptionWidnow(int player_number) : base(270, 540)
             {
                 // プレイヤーを設定
-                Player = Scene.Game.Player[player_number - 1];
+                Player = Game.Player[player_number - 1];
                 Controller = (Controller)Player.Controller;
 
                 // 引数に指定されたプレイヤー番号に応じてウィンドウの色を変える
@@ -221,7 +221,7 @@ namespace AeroGroovers.View
 
                 // 難易度の表示を変更
                 Difficulty difficulty = Player.Difficulty;
-                int level = Scene.Game.Score.Level[difficulty];
+                int level = Game.Score.Level[difficulty];
                 Difficulty_v.SetText(difficulty.ToString() + " : Lv." + level);
 
                 // ノーツ速度の表示を変更
@@ -236,7 +236,7 @@ namespace AeroGroovers.View
             /// </summary>
             private void OnChoosing()
             {
-                Player.Initialize(Scene.Game.Score.Notes[Player.Difficulty].Count);
+                Player.Initialize(Game.Score.Notes[Player.Difficulty].Count);
 
                 // 上ボタンが押された時
                 if (Controller.GetPush(Button.Up))
@@ -266,8 +266,8 @@ namespace AeroGroovers.View
                 // Bボタンが押された時
                 if (Controller.GetPush(Button.B))
                 {
-                    Sound.Stop(Scene.BGM_ID);
-                    Sound.Play(Scene.SE_Cancel);
+                    Sound.Stop(BGM_ID);
+                    Sound.Play(SE_Cancel);
                     Engine.ChangeSceneWithTransition(new SelectScene(), new TransitionFade(1, 1));
                 }
             }

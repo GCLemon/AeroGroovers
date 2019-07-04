@@ -248,7 +248,7 @@ namespace AeroGroovers.View
                     foreach (var pair in check) pair.Value.IsDrawn = true;
 
 
-                    Player player = Scene.Game.Player[PlayerNumber - 1];
+                    Player player = Game.Player[PlayerNumber - 1];
                     style_v.SetText(((Controller)player.Controller).ControllerType.ToString());
 
                     CurrentState = WindowState.Opening;
@@ -264,7 +264,7 @@ namespace AeroGroovers.View
             private void OnOpening()
             {
                 // プレイヤーの取得
-                Player player = Scene.Game.Player[PlayerNumber - 1];
+                Player player = Game.Player[PlayerNumber - 1];
 
                 // プレイやーがnullになった時
                 // すなわちプレイヤーが解除された時
@@ -283,7 +283,7 @@ namespace AeroGroovers.View
 
                     NoisyValue = 1;
 
-                    Sound.Play(Scene.SE_Close);
+                    Sound.Play(SE_Close);
                     CurrentState = WindowState.Closed;
                 }
 
@@ -303,7 +303,7 @@ namespace AeroGroovers.View
                         ? B_Hold + 1 : 0;
 
                     if (B_Hold == 40)
-                        Scene.Game.DeletePlayer(PlayerNumber);
+                        Game.DeletePlayer(PlayerNumber);
                 }
             }
 
@@ -337,7 +337,7 @@ namespace AeroGroovers.View
                 press_a.Color = new Color(255, 255, 255, (int)(255 * Pow(Sin(FrameCounter / 40.0), 2)));
 
                 // プレイヤーの取得
-                Player player = Scene.Game.Player[PlayerNumber - 1];
+                Player player = Game.Player[PlayerNumber - 1];
 
                 // プレイやーがnullではなくなった時,
                 // すなわちプレイヤーが登録された時
@@ -348,7 +348,7 @@ namespace AeroGroovers.View
                     press_a.IsDrawn = false;
                     FrameCounter = 10;
 
-                    Sound.Play(Scene.SE_Open);
+                    Sound.Play(SE_Open);
                     CurrentState = WindowState.Opened;
                 }
 

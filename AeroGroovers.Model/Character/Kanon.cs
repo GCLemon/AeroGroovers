@@ -51,7 +51,7 @@ namespace AeroGroovers.Model
                     break;
             }
 
-            Player.Update(judge, point);
+            Player.Update(judge, point * ClearPointAmplitude);
 
             AddEffet(judge);
 

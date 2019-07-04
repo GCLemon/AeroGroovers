@@ -54,21 +54,21 @@ namespace AeroGroovers.View
                         () => ((GameScene)Scene).EffectLayer.AddObject(
                             new GaugeEffect(
                                 Player.Character.Skills[0].SkillType,
-                                new Vector2DF(310 * i + 240, 590)
+                                new Vector2DF(310 * i + 235, 590)
                             )
                         );
                 Player.Character.Skills[1].AddEffect =
                         () => ((GameScene)Scene).EffectLayer.AddObject(
                             new GaugeEffect(
                                 Player.Character.Skills[1].SkillType,
-                                new Vector2DF(310 * i + 240, 630)
+                                new Vector2DF(310 * i + 235, 630)
                             )
                         );
                 Player.Character.Skills[2].AddEffect =
                         () => ((GameScene)Scene).EffectLayer.AddObject(
                             new GaugeEffect(
                                 Player.Character.Skills[2].SkillType,
-                                new Vector2DF(310 * i + 240, 670)
+                                new Vector2DF(310 * i + 235, 670)
                             )
                         );
             }

@@ -79,6 +79,8 @@
     <Compile Include="TextureObject\GaugeObject\SkillGauge.cs" />
     <Compile Include="TextureObject\PauseWindow.cs" />
     <Compile Include="Scene\ResultScene.cs" />
+    <Compile Include="TextureObject\ResultWindow.cs" />
+    <Compile Include="TextureObject\GaugeObject\ClearGauge_Result.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -93,7 +95,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AeroGroovers.model\AeroGroovers.model.csproj">
       <Project>{05C1E162-F1BB-4012-A7F3-EF53B07BDEEA}</Project>
-      <Name>AeroGroovers.model</Name>
+      <Name>AeroGroovers.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

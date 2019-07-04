@@ -11,7 +11,7 @@ namespace AeroGroovers.View
         /// <summary>
         /// ポーズ中に表示するウィンドウ
         /// </summary>
-        public class PauseWindow : Window
+        private class PauseWindow : Window
         {
             /// <summary>
             /// メニューの項目
@@ -124,16 +124,16 @@ namespace AeroGroovers.View
                             case MenuItem.Retry:
 
                                 // 新しくゲームシーンを作成し,そのシーンに移る
-                                Sound.Stop(Scene.BGM_ID);
-                                Sound.Play(Scene.SE_BattleStart);
+                                Sound.Stop(BGM_ID);
+                                Sound.Play(SE_BattleStart);
                                 Engine.ChangeSceneWithTransition(new GameScene(), new TransitionFade(1.276f, 2.996f));
                                 break;
 
                             case MenuItem.TuneSelect:
 
                                 // 曲選択に戻る
-                                Sound.Stop(Scene.BGM_ID);
-                                Sound.Play(Scene.SE_Cancel);
+                                Sound.Stop(BGM_ID);
+                                Sound.Play(SE_Cancel);
                                 Engine.ChangeSceneWithTransition(new SelectScene(), new TransitionFade(1, 1));
                                 break;
                         }

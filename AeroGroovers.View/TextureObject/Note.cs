@@ -11,7 +11,7 @@ namespace AeroGroovers.View
 {
     public partial class GameScene
     {
-        public class Note : TextureObject2D
+        private class Note : TextureObject2D
         {
             /// <summary>
             /// ノーツの移動を管理するタイマー
