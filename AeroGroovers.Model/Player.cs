@@ -95,11 +95,12 @@
         {
             get
             {
-                return (80_0000 * JustShoot
-                      + 56_0000 * Shoot
-                      + 32_0000 * Hit
-                      + 10_0000 * BestCombo) / MaxCombo
-                      + ClearPoint / (ClearPoint >= 7_0000 ? 1 : 2);
+                return (int)((100_0000 * Character.PointRate.JustShoot * JustShoot
+                            + 100_0000 * Character.PointRate.Shoot * Shoot
+                            + 100_0000 * Character.PointRate.Hit * Hit
+                            + 100_0000 * Character.PointRate.Miss * Miss
+                            + 100_0000 * Character.PointRate.Combo * BestCombo) / MaxCombo
+                            + ClearPoint / (ClearPoint >= 70_0000 ? 1 : 2) * Character.PointRate.ClearPoint);
             }
         }
 
@@ -110,7 +111,7 @@
         {
             get
             {
-                if (ClearPoint < 7_0000) return ClearJudge.Failure;
+                if (ClearPoint < 70_0000) return ClearJudge.Failure;
                 if (Miss == 0)
                 {
                     if (Hit == 0)
@@ -169,7 +170,13 @@
 
             ClearPoint = 0;
 
-            Character.Initialize(this);
+            switch(Character.GetType().Name)
+            {
+                case "Kanon": Character = new Kanon(this); break;
+                case "Rimu": Character = new Rimu(this); break;
+                case "Rintaro": Character = new Rintaro(this); break;
+                case "Kakeru": Character = new Kakeru(this); break;
+            }
         }
 
         /// <summary>
@@ -199,7 +206,7 @@
 
             ClearPoint += point;
 
-            if (ClearPoint > 10_0000) ClearPoint = 10_0000;
+            if (ClearPoint > 100_0000) ClearPoint = 100_0000;
             if (ClearPoint < 0) ClearPoint = 0;
         }
     }

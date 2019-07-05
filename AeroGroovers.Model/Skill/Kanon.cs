@@ -58,7 +58,7 @@
             {
                 foreach (var player in Game.Player)
                     if (player != null && player != Character.Player)
-                        player.Character.Damage(7000);
+                        player.Character.Damage(7_0000);
 
                 base.Trigger();
             }
@@ -174,7 +174,7 @@
             {
                 foreach (var player in Game.Player)
                     if (player != null && player != Character.Player)
-                        player.Character.Damage(10000);
+                        player.Character.Damage(10_0000);
 
                 base.Trigger();
             }

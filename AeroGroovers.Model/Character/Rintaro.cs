@@ -10,6 +10,11 @@
         /// </summary>
         public override string Image => "Resources/Graphics/Rintaro.png";
 
+        public Rintaro(Player Player) : base(Player)
+        {
+
+        }
+
         /// <summary>
         /// キャラクターを更新する
         /// </summary>

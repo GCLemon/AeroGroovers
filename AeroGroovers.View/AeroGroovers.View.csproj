@@ -58,13 +58,10 @@
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="TextObject\AGText.cs" />
     <Compile Include="Scene\EntryScene.cs" />
-    <Compile Include="TextureObject\Window.cs" />
-    <Compile Include="TextureObject\EntryWindow.cs" />
     <Compile Include="Scene\SelectScene.cs" />
     <Compile Include="Layer\ImageLayer.cs" />
     <Compile Include="Layer\TextLayer.cs" />
     <Compile Include="Scene\OptionScene.cs" />
-    <Compile Include="TextureObject\OptionWidnow.cs" />
     <Compile Include="Scene\GameScene.cs" />
     <Compile Include="Layer\PlayLayer.cs" />
     <Compile Include="TextureObject\Note.cs" />
@@ -77,10 +74,13 @@
     <Compile Include="TextureObject\GaugeObject\GaugeObject.cs" />
     <Compile Include="TextureObject\GaugeObject\ClearGauge.cs" />
     <Compile Include="TextureObject\GaugeObject\SkillGauge.cs" />
-    <Compile Include="TextureObject\PauseWindow.cs" />
     <Compile Include="Scene\ResultScene.cs" />
-    <Compile Include="TextureObject\ResultWindow.cs" />
     <Compile Include="TextureObject\GaugeObject\ClearGauge_Result.cs" />
+    <Compile Include="TextureObject\WindowObject\EntryWindow.cs" />
+    <Compile Include="TextureObject\WindowObject\OptionWidnow.cs" />
+    <Compile Include="TextureObject\WindowObject\PauseWindow.cs" />
+    <Compile Include="TextureObject\WindowObject\ResultWindow.cs" />
+    <Compile Include="TextureObject\WindowObject\Window.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -91,6 +91,7 @@
     <Folder Include="TextureObject\" />
     <Folder Include="Layer\" />
     <Folder Include="TextureObject\GaugeObject\" />
+    <Folder Include="TextureObject\WindowObject\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AeroGroovers.model\AeroGroovers.model.csproj">

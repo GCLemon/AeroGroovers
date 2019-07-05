@@ -10,6 +10,11 @@
         /// </summary>
         public override string Image => "Resources/Graphics/Rimu.png";
 
+        public Rimu(Player Player) : base(Player)
+        {
+
+        }
+
         /// <summary>
         /// キャラクターを更新する
         /// </summary>

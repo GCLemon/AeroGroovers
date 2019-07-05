@@ -10,6 +10,11 @@
         /// </summary>
         public override string Image => "Resources/Graphics/Kakeru.png";
 
+        public Kakeru(Player Player) : base(Player)
+        {
+
+        }
+
         /// <summary>
         /// キャラクターを更新する
         /// </summary>

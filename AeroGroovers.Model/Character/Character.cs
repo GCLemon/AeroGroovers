@@ -5,7 +5,6 @@
     /// </summary>
     public abstract class Character
     {
-
         /// <summary>
         /// Viewのゲージの数値を設定するメソッド
         /// </summary>
@@ -20,7 +19,7 @@
             set
             {
                 SetGaugeValue = value;
-                value(Player.ClearPoint / 1000);
+                value(Player.ClearPoint / 1_0000);
             }
         }
 
@@ -40,6 +39,55 @@
         public EffectMethod AddEffet { protected get; set; }
 
         /// <summary>
+        /// <para> キャラクターごとに設定する得点比率 </para>
+        /// <para> 各々の変数に設定できるのは定数のみ </para>
+        /// <para> JustShoot + Combo + ClearPoint == 1 となるように設定すること. </para>
+        /// </summary>
+        internal protected struct PointAllocation
+        {
+            /// <summary>
+            /// <para> JustShootの得点比率 </para>
+            /// <para> 標準 = 0.8 </para>
+            /// </summary>
+            public double JustShoot;
+
+            /// <summary>
+            /// <para> Shootの得点比率 </para>
+            /// <para> 標準 = 0.56 </para>
+            /// </summary>
+            public double Shoot;
+
+            /// <summary>
+            /// <para> Hitの得点比率 </para>
+            /// <para> 標準 = 0.32 </para>
+            /// </summary>
+            public double Hit;
+
+            /// <summary>
+            /// <para> Missの得点比率 </para>
+            /// <para> 標準 = 0 </para>
+            /// </summary>
+            public double Miss;
+
+            /// <summary>
+            /// <para> コンボ数の得点比率 </para>
+            /// <para> 標準 = 0.1 </para>
+            /// </summary>
+            public double Combo;
+
+            /// <summary>
+            /// <para> クリアポイントの得点比率 </para>
+            /// <para> 標準 = 0.1 </para>
+            /// </summary>
+            public double ClearPoint;
+        }
+
+        /// <summary>
+        /// キャラクターごとに設定する得点比率
+        /// </summary>
+        internal protected PointAllocation PointRate { get; protected set; }
+
+        /// <summary>
         /// このキャラクターが紐づいているプレイヤー
         /// </summary>
         public Player Player { get; protected set; }
@@ -57,22 +105,28 @@
         /// <summary>
         /// クリアゲージの上昇率
         /// </summary>
-        protected int ClearPointAmplitude;
+        protected int ClearPointAmplitude
+        {
+            get
+            {
+                switch (Player.Difficulty)
+                {
+                    case Difficulty.Novice: return 4;
+                    case Difficulty.Medium: return 2;
+                    case Difficulty.Expert: return 1;
+                }
+                return 0;
+            }
+                
+        }
 
         /// <summary>
-        /// キャラクターを初期化する
+        /// コンストラクタ
         /// </summary>
         /// <param name="Player"> 紐づけるプレイヤー </param>
-        public virtual void Initialize(Player Player)
+        public Character(Player Player)
         {
             this.Player = Player;
-
-            switch(Player.Difficulty)
-            {
-                case Difficulty.Novice: ClearPointAmplitude = 4; break;
-                case Difficulty.Medium: ClearPointAmplitude = 2; break;
-                case Difficulty.Expert: ClearPointAmplitude = 1; break;
-            }
         }
 
         /// <summary>

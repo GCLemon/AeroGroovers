@@ -7,12 +7,11 @@ namespace AeroGroovers.View
         static void Main(string[] args)
         {
             EngineOption option = new EngineOption();
-
 #if !DEBUG
             option.IsFullScreen = true;
 #endif
 
-            Engine.Initialize("Aero Groovers", 1280, 800, new EngineOption());
+            Engine.Initialize("Aero Groovers", 1280, 800, option);
 
             Engine.ChangeSceneWithTransition(new TitleScene(), new TransitionFade(0, 1));
 

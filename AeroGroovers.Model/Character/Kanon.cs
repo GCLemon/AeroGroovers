@@ -12,9 +12,18 @@ namespace AeroGroovers.Model
         /// </summary>
         public override string Image => "Resources/Graphics/Kanon.png";
 
-        public override void Initialize(Player Player)
+        public Kanon(Player Player) : base(Player)
         {
-            base.Initialize(Player);
+            // 得点比率の設定
+            PointRate = new PointAllocation
+            {
+                JustShoot = 0.8,
+                Shoot = 0.56,
+                Hit = 0.32,
+                Miss = 0,
+                Combo = 0.1,
+                ClearPoint = 0.1
+            };
 
             // スキルの登録
             Skills = new Skill[]
@@ -43,11 +52,11 @@ namespace AeroGroovers.Model
 
             switch (judge)
             {
-                case Judge.JustShoot: point = 1000; break;
-                case Judge.Shoot: point = 500; break;
-                case Judge.Hit: point = 250; break;
+                case Judge.JustShoot: point = 1_0000; break;
+                case Judge.Shoot: point = 5000; break;
+                case Judge.Hit: point = 2500; break;
                 case Judge.Miss:
-                    point = Skills[1].Update(judge) ? 0 : -7000;
+                    point = Skills[1].Update(judge) ? 0 : -7_0000;
                     break;
             }
 
@@ -55,7 +64,7 @@ namespace AeroGroovers.Model
 
             AddEffet(judge);
 
-            SetGaugeValue(Player.ClearPoint / 1000);
+            SetGaugeValue(Player.ClearPoint / 1_0000);
         }
 
         /// <summary>
@@ -65,7 +74,7 @@ namespace AeroGroovers.Model
         public override void Damage(int damage)
         {
             Player.ClearPoint -= damage;
-            SetGaugeValue(Player.Score / 1000);
+            SetGaugeValue(Player.Score / 1_0000);
         }
     }
 }

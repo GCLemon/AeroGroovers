@@ -135,7 +135,7 @@ namespace AeroGroovers.View
 
                 if (Player.Character == null)
                 {
-                    Player.Character = new Kanon();
+                    Player.Character = new Kanon(Player);
                     CharacterIndex = 0;
                 }
                 else
@@ -373,10 +373,10 @@ namespace AeroGroovers.View
                 // CharacterIndexごとにキャラクターを変える
                 switch (CharacterIndex)
                 {
-                    case 0: Player.Character = new Kanon(); break;
-                    case 1: Player.Character = new Rimu(); break;
-                    case 2: Player.Character = new Rintaro(); break;
-                    case 3: Player.Character = new Kakeru(); break;
+                    case 0: Player.Character = new Kanon(Player); break;
+                    case 1: Player.Character = new Rimu(Player); break;
+                    case 2: Player.Character = new Rintaro(Player); break;
+                    case 3: Player.Character = new Kakeru(Player); break;
                 }
             }
 
