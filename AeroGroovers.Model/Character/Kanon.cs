@@ -17,11 +17,11 @@ namespace AeroGroovers.Model
             // 得点比率の設定
             PointRate = new PointAllocation
             {
-                JustShoot = 0.8,
-                Shoot = 0.56,
-                Hit = 0.32,
-                Miss = 0,
-                Combo = 0.1,
+                 JustShoot = 0.8,
+                     Shoot = 0.56,
+                       Hit = 0.32,
+                      Miss = 0,
+                     Combo = 0.1,
                 ClearPoint = 0.1
             };
 
@@ -48,19 +48,13 @@ namespace AeroGroovers.Model
             Skills[0].Update(judge);
             Skills[2].Update(judge);
 
-            int point = 0;
-
             switch (judge)
             {
-                case Judge.JustShoot: point = 1_0000; break;
-                case Judge.Shoot: point = 5000; break;
-                case Judge.Hit: point = 2500; break;
-                case Judge.Miss:
-                    point = Skills[1].Update(judge) ? 0 : -7_0000;
-                    break;
+                case Judge.JustShoot: Player.Update(judge, 1_0000 * ClearPointAmplitude); break;
+                case Judge.Shoot: Player.Update(judge, 5000 * ClearPointAmplitude); break;
+                case Judge.Hit: Player.Update(judge, 2500 * ClearPointAmplitude); break;
+                case Judge.Miss: Player.Update(judge, Skills[1].Update(null) ? 0 : -7_0000); break;
             }
-
-            Player.Update(judge, point * ClearPointAmplitude);
 
             AddEffet(judge);
 

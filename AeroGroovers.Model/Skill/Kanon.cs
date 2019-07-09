@@ -24,7 +24,7 @@
                 : base(character)
             {
                 SkillPoint = 0;
-                SkillPoint_Max = 30;
+                SkillPoint_Max = 20;
             }
 
             /// <summary>
@@ -58,7 +58,7 @@
             {
                 foreach (var player in Game.Player)
                     if (player != null && player != Character.Player)
-                        player.Character.Damage(7_0000);
+                        player.Character.Damage(5_0000);
 
                 base.Trigger();
             }

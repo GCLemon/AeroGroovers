@@ -172,10 +172,10 @@
 
             switch(Character.GetType().Name)
             {
-                case "Kanon": Character = new Kanon(this); break;
-                case "Rimu": Character = new Rimu(this); break;
+                case "Kanon":   Character = new Kanon(this);   break;
+                case "Rimu":    Character = new Rimu(this);    break;
                 case "Rintaro": Character = new Rintaro(this); break;
-                case "Kakeru": Character = new Kakeru(this); break;
+                case "Kakeru":  Character = new Kakeru(this);  break;
             }
         }
 
