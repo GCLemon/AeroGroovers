@@ -1,7 +1,7 @@
 ﻿using asd;
 
 using System.Diagnostics;
-using System.IO;
+using System.Text;
 
 namespace AeroGroovers.View
 {
@@ -15,14 +15,17 @@ namespace AeroGroovers.View
 
         public Background(Vector3DF color, Vector3DF light)
         {
+            byte[] shader_code =
+                Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.OpenGL
+                ? Engine.File.CreateStaticFile("Shaders/BackEffect.glsl").Buffer
+                : Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.DirectX11
+                ? Engine.File.CreateStaticFile("Shaders/BackEffect.hlsl").Buffer
+                : new byte[0];
+
             // マテリアルを作成する
             material = Engine.Graphics.CreateMaterial2D(
                 Engine.Graphics.CreateShader2D(
-                      Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.OpenGL
-                    ? new StreamReader("Resources/Shaders/BackEffect.glsl").ReadToEnd()
-                    : Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.DirectX11
-                    ? new StreamReader("Resources/Shaders/BackEffect.hlsl").ReadToEnd()
-                    : null
+                        new UTF8Encoding().GetString(shader_code)
                     )
                 );
 

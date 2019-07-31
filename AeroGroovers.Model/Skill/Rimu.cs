@@ -51,11 +51,11 @@
             }
 
             /// <summary>
-            /// すきろが発動した時の動作
+            /// スキルが発動した時の動作
             /// </summary>
             protected override void Trigger()
             {
-                Character.Player.ClearPoint += 7_0000;
+                Character.Player.ClearPoint += 5_0000;
 
                 base.Trigger();
             }
@@ -113,7 +113,7 @@
             /// </summary>
             protected override void Trigger()
             {
-                Character.Player.ClearPoint += 7_0000;
+                Character.Player.ClearPoint += 5_0000;
 
                 base.Trigger();
             }

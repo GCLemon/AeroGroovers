@@ -13,10 +13,10 @@ namespace AeroGroovers.View
         {
             Judge Judge = new Judge();
 
-            static Effect JustShoot = Engine.Graphics.CreateEffect("Resources/Effects/JustShoot.efk");
-            static Effect Shoot = Engine.Graphics.CreateEffect("Resources/Effects/Shoot.efk");
-            static Effect Hit = Engine.Graphics.CreateEffect("Resources/Effects/Hit.efk");
-            static Effect Miss = Engine.Graphics.CreateEffect("Resources/Effects/Miss.efk");
+            static Effect JustShoot = Engine.Graphics.CreateEffect("Effects/JustShoot.efk");
+            static Effect Shoot = Engine.Graphics.CreateEffect("Effects/Shoot.efk");
+            static Effect Hit = Engine.Graphics.CreateEffect("Effects/Hit.efk");
+            static Effect Miss = Engine.Graphics.CreateEffect("Effects/Miss.efk");
 
             public HitEffect(Judge judge, Vector2DF position)
             {

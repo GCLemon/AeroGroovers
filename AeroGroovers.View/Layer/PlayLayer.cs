@@ -39,7 +39,7 @@ namespace AeroGroovers.View
                 // レーンの背景の配置
                 AddObject(new TextureObject2D
                 {
-                    Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/Lane_Back.png"),
+                    Texture = Engine.Graphics.CreateTexture2D("Graphics/Lane_Back.png"),
                     Position = new Vector2DF(310 * i + 40, 120),
                     DrawingPriority = 0
                 });
@@ -50,7 +50,7 @@ namespace AeroGroovers.View
                 // レーンの境目の配置
                 AddObject(new TextureObject2D
                 {
-                    Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/Lane_Border.png"),
+                    Texture = Engine.Graphics.CreateTexture2D("Graphics/Lane_Border.png"),
                     Position = new Vector2DF(310 * i + 40, 120),
                     DrawingPriority = 2
                 });

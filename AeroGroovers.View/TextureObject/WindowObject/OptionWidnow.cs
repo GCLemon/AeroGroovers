@@ -152,7 +152,7 @@ namespace AeroGroovers.View
                 // テキストの設定
                 Difficulty_l.SetText("< Difficulty >");
                 HighSpeed_l.SetText("< High Speed >");
-                Character_l.SetText("< Character >");
+                Character_l.SetText("< Artifact >");
                 Ready.SetText("READY");
 
                 Difficulty_v.SetText(Player.Difficulty.ToString());

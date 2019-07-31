@@ -26,7 +26,7 @@ namespace AeroGroovers.View
         {
             // フォントを設定する
             Font = Engine.Graphics.CreateDynamicFont(
-                "Resources/Graphics/Period.otf",
+                "Graphics/Period.otf",
                 fontSize,
                 fontColor,
                 outlineSize,
@@ -48,7 +48,7 @@ namespace AeroGroovers.View
         {
             // フォントを設定する
             Font = Engine.Graphics.CreateDynamicFont(
-                "Resources/Graphics/Period.otf",
+                "Graphics/Period.otf",
                 fontSize,
                 new Color(255, 255, 255),
                 outlineSize,

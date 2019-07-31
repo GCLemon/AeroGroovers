@@ -65,11 +65,11 @@ namespace AeroGroovers.View
 
                 switch (lane_number)
                 {
-                    case 1: Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/LaneEffect_R.png"); break;
-                    case 2: Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/LaneEffect_Y.png"); break;
-                    case 3: Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/LaneEffect_G.png"); break;
-                    case 4: Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/LaneEffect_B.png"); break;
-                    case 5: Texture = Engine.Graphics.CreateTexture2D("Resources/Graphics/LaneEffect_O.png"); break;
+                    case 1: Texture = Engine.Graphics.CreateTexture2D("Graphics/LaneEffect_R.png"); break;
+                    case 2: Texture = Engine.Graphics.CreateTexture2D("Graphics/LaneEffect_Y.png"); break;
+                    case 3: Texture = Engine.Graphics.CreateTexture2D("Graphics/LaneEffect_G.png"); break;
+                    case 4: Texture = Engine.Graphics.CreateTexture2D("Graphics/LaneEffect_B.png"); break;
+                    case 5: Texture = Engine.Graphics.CreateTexture2D("Graphics/LaneEffect_O.png"); break;
                 }
 
                 CenterPosition = new Vector2DF(0, Texture.Size.Y);

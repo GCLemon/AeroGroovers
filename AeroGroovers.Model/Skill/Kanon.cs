@@ -95,7 +95,7 @@
             /// <param name="judge"> 判定 </param>
             public override bool Update(Judge? judge)
             {
-                if (judge == Judge.Miss && SkillState)
+                if (SkillState)
                 {
                     Trigger();
                     base.Update(judge);
@@ -174,7 +174,7 @@
             {
                 foreach (var player in Game.Player)
                     if (player != null && player != Character.Player)
-                        player.Character.Damage(10_0000);
+                        player.Character.Damage(7_0000);
 
                 base.Trigger();
             }

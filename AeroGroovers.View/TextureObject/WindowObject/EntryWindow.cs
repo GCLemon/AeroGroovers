@@ -98,72 +98,82 @@ namespace AeroGroovers.View
 
             //////////////////////////////////////////////////
             //
+            //   WindowStateがOpeningの時に表示するゲージオブジェクト
+            //
+            private ReleaseGauge Gauge = new ReleaseGauge
+            {
+                Position = new Vector2DF(15, 350),
+                IsDrawn = false
+            };
+
+            //////////////////////////////////////////////////
+            //
             //   コントローラーの動作確認をする時に表示するテキスト
             //
 
             private Dictionary<Button, AGText> check = new Dictionary<Button, AGText>
-        {
-            { Button.A, new AGText(24, 0, center)
             {
-                Position = new Vector2DF(54, 240),
-                IsDrawn = false
-            }},
-            { Button.B, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(108, 240),
-                IsDrawn = false
-            }},
-            { Button.X, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(162, 240),
-                IsDrawn = false
-            }},
-            { Button.Y, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(216, 240),
-                IsDrawn = false
-            }},
-            { Button.L, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(90, 270),
-                IsDrawn = false
-            }},
-            { Button.R, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(180, 270),
-                IsDrawn = false
-            }},
-            { Button.Up,     new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(162, 300),
-                IsDrawn = false
-            }},
-            { Button.Down,   new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(108, 300),
-                IsDrawn = false
-            }},
-            { Button.Left, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(54, 300),
-                IsDrawn = false
-            }},
-            { Button.Right,  new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(216, 300),
-                IsDrawn = false
-            }},
-            { Button.Start,  new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(90, 330),
-                IsDrawn = false
-            }},
-            { Button.Select, new AGText(24, 0, center)
-            {
-                Position = new Vector2DF(180, 330),
-                IsDrawn = false
-            }}
-        };
+                { Button.A, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(54, 240),
+                    IsDrawn = false
+                }},
+                { Button.B, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(108, 240),
+                    IsDrawn = false
+                }},
+                { Button.X, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(162, 240),
+                    IsDrawn = false
+                }},
+                { Button.Y, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(216, 240),
+                    IsDrawn = false
+                }},
+                { Button.L, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(90, 270),
+                    IsDrawn = false
+                }},
+                { Button.R, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(180, 270),
+                    IsDrawn = false
+                }},
+                { Button.Up,     new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(162, 300),
+                    IsDrawn = false
+                }},
+                { Button.Down,   new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(108, 300),
+                    IsDrawn = false
+                }},
+                { Button.Left, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(54, 300),
+                    IsDrawn = false
+                }},
+                { Button.Right,  new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(216, 300),
+                    IsDrawn = false
+                }},
+                { Button.Start,  new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(90, 330),
+                    IsDrawn = false
+                }},
+                { Button.Select, new AGText(24, 0, center)
+                {
+                    Position = new Vector2DF(180, 330),
+                    IsDrawn = false
+                }}
+            };
 
             public EntryWindow(int player_number) : base(270, 100)
             {
@@ -209,6 +219,7 @@ namespace AeroGroovers.View
                 // オブジェクトを追加する
                 AddObjects(press_a, playr_l, style_l, style_v, check_l, press_b);
                 foreach (var pair in check) AddObject(pair.Value);
+                AddObject(Gauge);
             }
 
             protected override void OnUpdate()
@@ -247,6 +258,7 @@ namespace AeroGroovers.View
 
                     foreach (var pair in check) pair.Value.IsDrawn = true;
 
+                    Gauge.IsDrawn = true;
 
                     Player player = Game.Player[PlayerNumber - 1];
                     style_v.SetText(((Controller)player.Controller).ControllerType.ToString());
@@ -281,6 +293,8 @@ namespace AeroGroovers.View
 
                     foreach (var pair in check) pair.Value.IsDrawn = false;
 
+                    Gauge.IsDrawn = false;
+
                     NoisyValue = 1;
 
                     Sound.Play(SE_Close);
@@ -301,6 +315,8 @@ namespace AeroGroovers.View
                     B_Hold =
                         ((Controller)player.Controller).GetHold(Button.B)
                         ? B_Hold + 1 : 0;
+
+                    Gauge.GaugeValue = (int)(B_Hold * 2.5);
 
                     if (B_Hold == 40)
                         Game.DeletePlayer(PlayerNumber);

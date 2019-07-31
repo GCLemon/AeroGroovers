@@ -11,13 +11,13 @@ namespace AeroGroovers.View
         /// </summary>
         private class GaugeEffect : EffectObject2D
         {
-            static Effect Attack = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Attack.efk");
-            static Effect Heal = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Heal.efk");
-            static Effect Boost = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Boost.efk");
-            static Effect Guard = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Guard.efk");
-            static Effect Support = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Support.efk");
-            static Effect Edge = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Edge.efk");
-            static Effect Damage = Engine.Graphics.CreateEffect("Resources/Effects/Trigger_Danger.efk");
+            static Effect Attack = Engine.Graphics.CreateEffect("Effects/Trigger_Attack.efk");
+            static Effect Heal = Engine.Graphics.CreateEffect("Effects/Trigger_Heal.efk");
+            static Effect Boost = Engine.Graphics.CreateEffect("Effects/Trigger_Boost.efk");
+            static Effect Guard = Engine.Graphics.CreateEffect("Effects/Trigger_Guard.efk");
+            static Effect Support = Engine.Graphics.CreateEffect("Effects/Trigger_Support.efk");
+            static Effect Edge = Engine.Graphics.CreateEffect("Effects/Trigger_Edge.efk");
+            static Effect Damage = Engine.Graphics.CreateEffect("Effects/Trigger_Danger.efk");
 
             public GaugeEffect(SkillType skill, Vector2DF position)
             {

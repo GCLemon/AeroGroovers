@@ -9,7 +9,7 @@ namespace AeroGroovers.View
         /// </summary>
         private class ReadyGoEffect : EffectObject2D
         {
-            static Effect ReadyGo = Engine.Graphics.CreateEffect("Resources/Effects/Ready_Go.efk");
+            static Effect ReadyGo = Engine.Graphics.CreateEffect("Effects/Ready_Go.efk");
 
             public ReadyGoEffect()
             {

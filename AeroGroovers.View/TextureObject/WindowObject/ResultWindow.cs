@@ -66,7 +66,7 @@ namespace AeroGroovers.View
                 GaugePoint_V.SetText
                 (
                     player.ClearJudge == ClearJudge.Failure ? "Failed : " : "Cleared : "
-                    + (player.ClearPoint * 0.001).ToString("0") + "%"
+                    + (player.ClearPoint * 0.0001).ToString("0") + "%"
                 );
 
                 Score_L.SetText("Total Score");

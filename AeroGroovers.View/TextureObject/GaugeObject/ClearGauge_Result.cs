@@ -21,7 +21,7 @@ namespace AeroGroovers.View
                 // キャラクターを紐付け
                 Character = character;
 
-                Initialize("Resources/Graphics/ClearGauge.png");
+                Initialize("Graphics/ClearGauge.png");
 
                 UR = new Vector2DF(216, 0);
                 UL = new Vector2DF(0, 0);

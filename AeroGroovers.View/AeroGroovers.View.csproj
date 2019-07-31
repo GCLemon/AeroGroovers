@@ -81,6 +81,7 @@
     <Compile Include="TextureObject\WindowObject\PauseWindow.cs" />
     <Compile Include="TextureObject\WindowObject\ResultWindow.cs" />
     <Compile Include="TextureObject\WindowObject\Window.cs" />
+    <Compile Include="TextureObject\GaugeObject\ReleaseGauge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

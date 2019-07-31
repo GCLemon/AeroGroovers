@@ -10,7 +10,7 @@ namespace AeroGroovers.Model
         /// <summary>
         /// キャラクター画像のパス
         /// </summary>
-        public override string Image => "Resources/Graphics/Kanon.png";
+        public override string Image => "Graphics/Kanon.png";
 
         public Kanon(Player Player) : base(Player)
         {

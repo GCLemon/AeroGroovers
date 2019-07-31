@@ -1,7 +1,7 @@
 ﻿using asd;
 
 using System.Diagnostics;
-using System.IO;
+using System.Text;
 
 namespace AeroGroovers.View
 {
@@ -40,13 +40,17 @@ namespace AeroGroovers.View
         /// <summary>
         /// ウィンドウに描画するマテリアル
         /// </summary>
-        private readonly Material2D WindowMaterial = Engine.Graphics.CreateMaterial2D(
+        static byte[] shader_code =
+            Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.OpenGL
+            ? Engine.File.CreateStaticFile("Shaders/WindowShader.glsl").Buffer
+            : Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.DirectX11
+            ? Engine.File.CreateStaticFile("Shaders/WindowShader.hlsl").Buffer
+            : new byte[0];
+
+        private readonly Material2D WindowMaterial =
+            Engine.Graphics.CreateMaterial2D(
                 Engine.Graphics.CreateShader2D(
-                      Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.OpenGL
-                    ? new StreamReader("Resources/Shaders/WindowShader.glsl").ReadToEnd()
-                    : Engine.Graphics.GraphicsDeviceType == GraphicsDeviceType.DirectX11
-                    ? new StreamReader("Resources/Shaders/WindowShader.hlsl").ReadToEnd()
-                    : null
+                    new UTF8Encoding().GetString(shader_code)
                 )
             );
 
@@ -162,7 +166,7 @@ namespace AeroGroovers.View
             lu.Texture = _u.Texture = ru.Texture =
             l_.Texture = r_.Texture =
             ld.Texture = _d.Texture = rd.Texture =
-            Engine.Graphics.CreateTexture2D("Resources/Graphics/Window.png");
+            Engine.Graphics.CreateTexture2D("Graphics/Window.png");
         }
 
         /// <summary>

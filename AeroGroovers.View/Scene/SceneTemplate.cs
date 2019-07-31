@@ -82,35 +82,35 @@ namespace AeroGroovers.View
         public Scene()
         {
             // BGMの設定
-            BGM_Title = Sound.CreateBGM("Resources/Sounds/BGM_Title.ogg");
+            BGM_Title = Sound.CreateBGM("Sounds/BGM_Title.ogg");
             BGM_Title.IsLoopingMode = true;
             BGM_Title.LoopStartingPoint = 18.223f;
             BGM_Title.LoopEndPoint = BGM_Title.Length;
 
-            BGM_Entry = Sound.CreateBGM("Resources/Sounds/BGM_Entry.ogg");
+            BGM_Entry = Sound.CreateBGM("Sounds/BGM_Entry.ogg");
             BGM_Entry.IsLoopingMode = true;
             BGM_Entry.LoopStartingPoint = 0;
             BGM_Entry.LoopEndPoint = BGM_Title.Length;
 
-            BGM_Option = Sound.CreateBGM("Resources/Sounds/BGM_Option.ogg");
+            BGM_Option = Sound.CreateBGM("Sounds/BGM_Option.ogg");
             BGM_Option.IsLoopingMode = true;
             BGM_Option.LoopStartingPoint = 0;
             BGM_Option.LoopEndPoint = BGM_Title.Length;
 
-            BGM_Result = Sound.CreateBGM("Resources/Sounds/BGM_Result.ogg");
+            BGM_Result = Sound.CreateBGM("Sounds/BGM_Result.ogg");
             BGM_Result.IsLoopingMode = true;
             BGM_Result.LoopStartingPoint = 0;
             BGM_Result.LoopEndPoint = BGM_Title.Length;
 
             // 効果音の設定
-            SE_Start = Sound.CreateSE("Resources/Sounds/SE_Start.ogg");
-            SE_Cancel = Sound.CreateSE("Resources/Sounds/SE_Cancel.ogg");
-            SE_Open = Sound.CreateSE("Resources/Sounds/SE_Open.ogg");
-            SE_Close = Sound.CreateSE("Resources/Sounds/SE_Close.ogg");
-            SE_Decision = Sound.CreateSE("Resources/Sounds/SE_Decision.ogg");
-            SE_Select = Sound.CreateSE("Resources/Sounds/SE_Select.ogg");
-            SE_BattleStart = Sound.CreateSE("Resources/Sounds/SE_BattleStart.ogg");
-            SE_Hit = Sound.CreateSE("Resources/Sounds/SE_Hit.ogg");
+            SE_Start = Sound.CreateSE("Sounds/SE_Start.ogg");
+            SE_Cancel = Sound.CreateSE("Sounds/SE_Cancel.ogg");
+            SE_Open = Sound.CreateSE("Sounds/SE_Open.ogg");
+            SE_Close = Sound.CreateSE("Sounds/SE_Close.ogg");
+            SE_Decision = Sound.CreateSE("Sounds/SE_Decision.ogg");
+            SE_Select = Sound.CreateSE("Sounds/SE_Select.ogg");
+            SE_BattleStart = Sound.CreateSE("Sounds/SE_BattleStart.ogg");
+            SE_Hit = Sound.CreateSE("Sounds/SE_Hit.ogg");
         }
 
         protected override void OnStartUpdating()

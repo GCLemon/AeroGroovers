@@ -59,8 +59,6 @@ namespace AeroGroovers.View
             /// </summary>
             private void OnMoving()
             {
-                System.Console.WriteLine(FrameCounter);
-
                 float v = 1 - (float)Pow(1 - FrameCounter / 12.0, 3);
                 int n = 0;
                 switch (Direction)

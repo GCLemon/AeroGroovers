@@ -77,7 +77,7 @@ namespace AeroGroovers.View
 
                 Texture = Engine
                     .Graphics
-                    .CreateTexture2D("Resources/Graphics/Notes.png");
+                    .CreateTexture2D("Graphics/Notes.png");
                 Src = NoteSRC[info.Number - 1];
                 CenterPosition = Src.Size * new Vector2DF(0, 0.5f);
                 Position = new Vector2DF(310 * player.PlayerNumber - ((info.Number == 5) ? 268 : 51 * info.Number), 0);
