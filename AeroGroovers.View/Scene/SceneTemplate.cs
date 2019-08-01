@@ -21,63 +21,63 @@ namespace AeroGroovers.View
         /// <summary>
         /// タイトルシーンで再生するBGM
         /// </summary>
-        public static SoundSource BGM_Title;
+        public SoundSource BGM_Title;
 
         /// <summary>
         /// コントローラー登録シーンで再生するBGM
         /// </summary>
-        public static SoundSource BGM_Entry;
+        public SoundSource BGM_Entry;
 
         /// <summary>
         /// ゲーム設定シーンで再生するBGM
         /// </summary>
-        public static SoundSource BGM_Option;
+        public SoundSource BGM_Option;
 
         /// <summary>
         /// リザルトシーンで再生するBGM
         /// </summary>
-        public static SoundSource BGM_Result;
+        public SoundSource BGM_Result;
 
 
         /// <summary>
         /// ゲーム開始時に再生する効果音
         /// </summary>
-        public static SoundSource SE_Start;
+        public SoundSource SE_Start;
 
         /// <summary>
         /// 前のシーンに戻るときに再生する効果音
         /// </summary>
-        public static SoundSource SE_Cancel;
+        public SoundSource SE_Cancel;
 
         /// <summary>
         /// ウィンドウを開くときに再生する効果音
         /// </summary>
-        public static SoundSource SE_Open;
+        public SoundSource SE_Open;
 
         /// <summary>
         /// ウィンドウを閉じるときに再生する効果音
         /// </summary>
-        public static SoundSource SE_Close;
+        public SoundSource SE_Close;
 
         /// <summary>
         /// 決定したときに再生する効果音
         /// </summary>
-        public static SoundSource SE_Decision;
+        public SoundSource SE_Decision;
 
         /// <summary>
         /// 選択項目を移動するときに再生する効果音
         /// </summary>
-        public static SoundSource SE_Select;
+        public SoundSource SE_Select;
 
         /// <summary>
         /// プレイ開始時に再生する効果音
         /// </summary>
-        public static SoundSource SE_BattleStart;
+        public SoundSource SE_BattleStart;
 
         /// <summary>
         /// ノーツが反応したときに再生する効果音
         /// </summary>
-        public static SoundSource SE_Hit;
+        public SoundSource SE_Hit;
 
         public Scene()
         {

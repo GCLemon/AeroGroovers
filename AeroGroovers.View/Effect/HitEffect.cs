@@ -41,7 +41,7 @@ namespace AeroGroovers.View
                     case Judge.JustShoot:
                     case Judge.Shoot:
                     case Judge.Hit:
-                        Sound.Play(Scene.SE_Hit);
+                        Sound.Play(((Scene)Layer.Scene).SE_Hit);
                         break;
                 }
 

@@ -267,7 +267,7 @@ namespace AeroGroovers.View
                 if (Controller.GetPush(Button.B))
                 {
                     Sound.Stop(BGM_ID);
-                    Sound.Play(SE_Cancel);
+                    Sound.Play(((Scene)Layer.Scene).SE_Cancel);
                     Engine.ChangeSceneWithTransition(new SelectScene(), new TransitionFade(1, 1));
                 }
             }

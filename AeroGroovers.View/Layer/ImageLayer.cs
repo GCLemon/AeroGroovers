@@ -121,7 +121,7 @@ namespace AeroGroovers.View
                     // 画像を左に動かす
                     if(((Controller)player.Controller).GetHold(Button.Left))
                     {
-                        Sound.Play(SE_Select);
+                        Sound.Play(((Scene)Scene).SE_Select);
 
                         Sound.Stop(BGM_ID);
                         Game.DecrementScoreIndex();
@@ -133,7 +133,7 @@ namespace AeroGroovers.View
                     // 画像を右に動かす
                     if (((Controller)player.Controller).GetHold(Button.Right))
                     {
-                        Sound.Play(SE_Select);
+                        Sound.Play(((Scene)Scene).SE_Select);
 
                         Sound.Stop(BGM_ID);
                         Game.IncrementScoreIndex();
@@ -146,7 +146,7 @@ namespace AeroGroovers.View
                     if (((Controller)player.Controller).GetPush(Button.A))
                     {
                         Sound.Stop(BGM_ID);
-                        Sound.Play(SE_Decision);
+                        Sound.Play(((Scene)Scene).SE_Decision);
                         Engine.ChangeSceneWithTransition(new OptionScene(), new TransitionFade(1, 1));
                     }
 
@@ -154,7 +154,7 @@ namespace AeroGroovers.View
                     if (((Controller)player.Controller).GetPush(Button.B))
                     {
                         Sound.Stop(BGM_ID);
-                        Sound.Play(SE_Cancel);
+                        Sound.Play(((Scene)Scene).SE_Cancel);
                         Engine.ChangeSceneWithTransition(new EntryScene(), new TransitionFade(1, 1));
                     }
                 }

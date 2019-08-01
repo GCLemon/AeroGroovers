@@ -297,7 +297,7 @@ namespace AeroGroovers.View
 
                     NoisyValue = 1;
 
-                    Sound.Play(SE_Close);
+                    Sound.Play(((Scene)Layer.Scene).SE_Close);
                     CurrentState = WindowState.Closed;
                 }
 
@@ -364,7 +364,7 @@ namespace AeroGroovers.View
                     press_a.IsDrawn = false;
                     FrameCounter = 10;
 
-                    Sound.Play(SE_Open);
+                    Sound.Play(((Scene)Layer.Scene).SE_Open);
                     CurrentState = WindowState.Opened;
                 }
 

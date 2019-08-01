@@ -125,7 +125,7 @@ namespace AeroGroovers.View
 
                                 // 新しくゲームシーンを作成し,そのシーンに移る
                                 Sound.Stop(BGM_ID);
-                                Sound.Play(SE_BattleStart);
+                                Sound.Play(((Scene)Layer.Scene).SE_BattleStart);
                                 Engine.ChangeSceneWithTransition(new GameScene(), new TransitionFade(1.276f, 2.996f));
                                 break;
 
@@ -133,7 +133,7 @@ namespace AeroGroovers.View
 
                                 // 曲選択に戻る
                                 Sound.Stop(BGM_ID);
-                                Sound.Play(SE_Cancel);
+                                Sound.Play(((Scene)Layer.Scene).SE_Cancel);
                                 Engine.ChangeSceneWithTransition(new SelectScene(), new TransitionFade(1, 1));
                                 break;
                         }

@@ -13,7 +13,7 @@ namespace AeroGroovers.View
             Engine.Initialize("Aero Groovers", 1280, 800, option);
 
             Engine.File.AddRootDirectory("Resources/");
-            //Engine.File.AddRootPackageWithPassword("Resources.pack", "AERO_GROOVERS");
+            // Engine.File.AddRootPackageWithPassword("Resources.pack", "AERO_GROOVERS");
 
             Engine.ChangeSceneWithTransition(new TitleScene(), new TransitionFade(0, 1));
 
